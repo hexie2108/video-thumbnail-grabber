@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="thumbnail grabber">
+    <title>thumbnail grabber</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <!--    加载js文件-->
+    <script src="js/script.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="container" style="min-height: 100vh;">
+        <div class="jumbotron bg-info text-light mt-3">
+            <h1>thumbnail grabber</h1>
+            <h4>get video thubnail image from bilibili and youtube</h4>
+        </div>
+
+        <form class="row" id="grabber">
+
+            <div class="col-sm-9 col-12">
+                <div class="input-group">
+                    <input id="video" class="form-control" placeholder="video id" name="video_id" required
+                        autocomplete="off" />
+                    <div class="invalid-feedback ">
+                        error message
+                    </div>
+                </div>
+                <div class="form-group my-2">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="bilibili" name="video_type"
+                            value="bilibili" checked>
+                        <label class="custom-control-label" for="bilibili">Bilibili</label>
+                    </div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="youtube" name="video_type" value="youtube">
+                        <label class="custom-control-label" for="youtube">Youtube</label>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-sm-3 my-sm-0 my-3 col-12 form-group">
+                <button type="submit" class="btn btn-info w-100">查询</button>
+            </div>
+
+        </form>
+
+        <div class="text-center loading" style="display: none;">
+            <div class="spinner-border text-primary" >
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+
+        <div class="result-container my-2">
+
+            <h4>Result</h4>
+
+            <div class="result">
+
+            </div>
+
+
+        </div>
+
+        <hr class="my-4">
+
+        <div class="my-2 pub">
+
+        </div>
+
+        <hr class="my-4">
+
+        <div class="my-4">
+            @河蟹 <a href="http://www.mikuclub.org/" target="_blank">www.mikuclub.org</a>
+        </div>
+
+
+    </div>
+
+    <div class="hidden-data d-none ">
+        <div class="clone img-item" style="display: none;">
+            <img class="img-fluid" alt="thumbnail" referrerPolicy="no-referrer" />
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
